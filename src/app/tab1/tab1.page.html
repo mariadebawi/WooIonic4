@@ -1,0 +1,89 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Artizone
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- card-->
+    <ion-card class="welcome-card">
+      <ion-img src="/assets/imgs/shoes.jpg"></ion-img>
+      <ion-card-content>
+          ArtizoneArtizoneArtizoneArtizoneArtizoneArtizoneArtizoneArtizone
+      </ion-card-content>
+    </ion-card>
+  <!-- categorie-->
+    <ion-grid>
+        <ion-row>
+          <ion-col size="9">
+            Categories
+          </ion-col>
+          <ion-col size="3">
+            <small>voir plus <ion-icon name="arrow-forward"></ion-icon> </small>
+          </ion-col>
+          </ion-row>
+          </ion-grid>
+    <!--slides Categries-->
+          <ion-slides  [options]="slideOpts">
+              <ion-slide style="background-image: url('assets/imgs/1.jpeg');">
+               
+              </ion-slide>
+              <ion-slide style="background-image: url('assets/imgs/2.jpeg');">
+              </ion-slide>
+              <ion-slide style="background-image: url('assets/imgs/3.jpeg');">
+              </ion-slide>
+            </ion-slides>
+   <!-- recents -->
+
+   <!-- categorie-->
+   <ion-grid>
+      <ion-row>
+        <ion-col size="9">
+          Recents
+        </ion-col>
+        </ion-row>
+        </ion-grid>
+
+   <!--slides recents
+         <ion-slides  [options]="slideOpts" *ngFor="let p of products| slice:0:2;">
+            <ion-slide  style="background-image: url('assets/imgs/2.jpeg');"> 
+              <div class="slide-content">
+                <h6>{{p.name}}</h6>
+              </div>
+            </ion-slide>
+            <ion-slide style="background-image: url('assets/imgs/2.jpeg');">
+              <div class="slide-content">
+                  <h6>{{p.name}}</h6>
+                </div>              </ion-slide>
+            <ion-slide style="background-image: url('assets/imgs/3.jpeg');">
+              <div class="slide-content">
+                  <h6>{{p.name}}</h6>
+                </div>          
+                </ion-slide>
+          </ion-slides>
+        -->
+
+          <ion-grid  *ngFor="let p of products| slice:0:2;" >
+              <ion-row>
+                <ion-col size="4">
+                    <h6>{{p.name}}</h6>
+                    <h6>{{p.price}}</h6>
+
+                </ion-col>
+                <ion-col size="4">
+                    <h6>{{p.name}}</h6>
+                    <h6>{{p.price}}</h6>
+
+                </ion-col>
+                   <ion-col size="4">
+                    <h6>{{p.name}}</h6>
+                    <h6>{{p.price}}</h6>
+
+                </ion-col>
+               </ion-row>
+          </ion-grid>
+             
+
+</ion-content>

@@ -1,5 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import * as WC from 'woocommerce-api';
+import {IonSlides} from '@ionic/angular';
 
 
 @Component({
@@ -10,24 +11,17 @@ import * as WC from 'woocommerce-api';
 export class Tab1Page {
   Woocommerce: any;
   public products;
-  product0 ;
-  price0 ;
-  src0 ;
-  product1 ;
-  price1 ;
-  src1;
-  product2 ;
-  price2 ;
-  src2 ;
-  product3 ;
-  price3 ;
-  src3 ;
-  product4 ;
-  price4 ;
-  src4 ;
-  product5 ;
-  price5 ;
-  src5 ;
+  product0 ; price0 ; src0 ;
+  product1 ; price1 ; src1;
+  product2 ; price2 ; src2 ;
+  product3 ; price3 ; src3 ;
+  product4 ; price4 ; src4 ;
+
+  product5 ; price5 ; src5 ;
+  product6 ; price6 ; src6 ;
+  product7 ; price7 ; src7;
+  product8 ; price8 ; src8 ;
+  product9 ; price9 ; src9 ;
   productsMore: any[];
   page: number;
   slideOpts = {
@@ -76,8 +70,27 @@ export class Tab1Page {
       this.product5 = this.products[5].name;
       this.price5 = this.products[5].price;
       this.src5 = this.products[5].images[0].src;
+       //
+       this.product6 = this.products[6].name;
+       this.price6 = this.products[6].price;
+       this.src6 = this.products[6].images[0].src;
+       //
+       this.product7 = this.products[7].name;
+       this.price7 = this.products[7].price;
+       this.src7 = this.products[7].images[0].src;
+       //
+      this.product8 = this.products[8].name;
+      this.price8 = this.products[8].price;
+      this.src8 = this.products[8].images[0].src;
+       //
+      this.product9 = this.products[9].name;
+      this.price9 = this.products[9].price;
+      this.src9 = this.products[9].images[0].src;
     }, (err) => {
       console.log(err);
     });
+  }
+  slidesDidLoad(slides: IonSlides) {
+    slides.startAutoplay();
   }
 }

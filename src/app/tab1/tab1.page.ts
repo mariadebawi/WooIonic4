@@ -9,7 +9,25 @@ import * as WC from 'woocommerce-api';
 })
 export class Tab1Page {
   Woocommerce: any;
-  products: any[];
+  public products;
+  product0 ;
+  price0 ;
+  src0 ;
+  product1 ;
+  price1 ;
+  src1;
+  product2 ;
+  price2 ;
+  src2 ;
+  product3 ;
+  price3 ;
+  src3 ;
+  product4 ;
+  price4 ;
+  src4 ;
+  product5 ;
+  price5 ;
+  src5 ;
   productsMore: any[];
   page: number;
   slideOpts = {
@@ -28,11 +46,38 @@ export class Tab1Page {
     });
 
     this.Woocommerce.getAsync('products').then((data) => {
-      console.log(JSON.parse(data.body));
+       console.log(JSON.parse(data.body));
       this.products = JSON.parse(data.body);
+
+      this.product0 = this.products[0].name;
+      this.price0 = this.products[0].price;
+      this.src0 = this.products[0].images[0].src;
+      console.log(this.product0);
+      console.log(this.products[0].images[0].src);
+       //
+      this.product1 = this.products[1].name;
+      this.price1 = this.products[1].price;
+      this.src1 = this.products[1].images[0].src;
+      console.log(this.products[1].images[0].src);
+      //
+       this.product2 = this.products[2].name;
+      this.price2 = this.products[2].price;
+      this.src2 = this.products[2].images[0].src;
+
+      //
+       this.product3 = this.products[3].name;
+      this.price3 = this.products[3].price;
+      this.src3 = this.products[3].images[0].src;
+      //
+      this.product4 = this.products[4].name;
+      this.price4 = this.products[4].price;
+      this.src4 = this.products[4].images[0].src;
+      //
+      this.product5 = this.products[5].name;
+      this.price5 = this.products[5].price;
+      this.src5 = this.products[5].images[0].src;
     }, (err) => {
       console.log(err);
     });
-
   }
 }

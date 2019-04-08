@@ -1,12 +1,20 @@
 .welcome-card  {
-  height: 50vh;
+  height: 20vh;
 }
 .welcome-card ion-img {
   max-height: 35vh;
   overflow: hidden;
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-ion-slides{
-  height: 20vh;
+ion-slides ion-avatar{
+  height: -2vh !important;
+  border-radius: 50%;
+  width: 100%;
+}
+ion-slides .recent{
+  height: 50vh;
 }
 ion-slide{
   background-size:cover;

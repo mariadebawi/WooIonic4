@@ -5,17 +5,11 @@
     </ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content>
   <!-- card-->
-    <ion-card class="welcome-card">
-      <ion-img src="/assets/imgs/shoes.jpg"></ion-img>
-
-      <ion-card-content>
-          ArtizoneArtizoneArtizoneArtizoneArtizoneArtizoneArtizoneArtizone
-      </ion-card-content>    
-    </ion-card>
-  
+    <div class="welcome-card">
+      <div class="welcome-card-content">Artizone</div>
+    </div>
   <!-- categorie-->
     <ion-grid>
         <ion-row>
@@ -28,7 +22,59 @@
           </ion-row>
           </ion-grid>
     <!--slides Categries-->
-          <ion-slides  [options]="slideOpts" style="padding:6px"  >
+    <ion-grid>
+      <ion-row>
+        <ion-col size="4">
+          <div style="padding: 6px 0;display: inline-block; border-radius: 4px; position: relative;">
+            <img src="assets/imgs/1.jpeg" style="border-radius: 4px;vertical-align: middle;" />
+            <div class="categories">
+              <h6> ccccc</h6>
+            </div>
+        </div>
+        </ion-col>
+        <ion-col size="4">
+          <div style="padding: 6px 0;display: inline-block; border-radius: 4px; position: relative;">
+            <img src="assets/imgs/1.jpeg" style="border-radius: 4px;vertical-align: middle;" />
+            <div class="categories">
+              <h6> ccccc</h6>
+            </div>
+        </div>
+        </ion-col><ion-col size="4">
+          <div style="padding: 6px 0;display: inline-block; border-radius: 4px; position: relative;">
+            <img src="assets/imgs/1.jpeg" style="border-radius: 4px;vertical-align: middle;" />
+            <div class="categories">
+              <h6> ccccc</h6>
+            </div>
+        </div>
+        </ion-col>
+        <ion-col size="4">
+          <div style="padding: 6px 0;display: inline-block; border-radius: 4px; position: relative;">
+            <img src="assets/imgs/1.jpeg" style="border-radius: 4px;vertical-align: middle;" />
+            <div class="categories">
+              <h6> ccccc</h6>
+            </div>
+        </div>
+        </ion-col>
+        <ion-col size="4">
+          <div style="padding: 6px 0;display: inline-block; border-radius: 4px; position: relative;">
+            <img src="assets/imgs/1.jpeg" style="border-radius: 4px;vertical-align: middle;" />
+            <div class="categories">
+              <h6> ccccc</h6>
+            </div>
+        </div>
+        </ion-col><ion-col size="4">
+          <div style="padding: 6px 0;display: inline-block; border-radius: 4px; position: relative;">
+            <img src="assets/imgs/1.jpeg" style="border-radius: 4px;vertical-align: middle;" />
+            <div class="categories">
+              <h6> ccccc</h6>
+            </div>
+        </div>
+        </ion-col>
+        </ion-row>
+        </ion-grid>
+
+    <!--
+          <ion-slides  [options]="slideOpts1" style="padding:6px 0"  >
               <ion-slide>
                   <ion-img src="assets/imgs/1.jpeg">
                   </ion-img>
@@ -50,8 +96,8 @@
                   </div>
               </ion-slide>
             </ion-slides>
-            <ion-slides  [options]="slideOpts"  style="padding:6px" >
-                <ion-slide >
+            <ion-slides  [options]="slideOpts1"  style="padding:6px 0 " >
+                <ion-slide style="border-radius: 4px " >
                     <ion-img src="assets/imgs/1.jpeg"> </ion-img>
                     <div class="categories">
                         <h6> ccccc</h6>
@@ -70,6 +116,7 @@
                       </div>    
                 </ion-slide>
               </ion-slides>
+            -->
    <!-- recents -->
 
    <!-- categorie-->
@@ -88,7 +135,7 @@
                 <div class="recent-content">
                   <ion-img src="{{src0}}" class="recent-img"> </ion-img>
                 <h6>{{product0}}</h6>
-                <h6>{{price0}}</h6>
+                <h6>{{price0}} <span>Dt</span></h6>
               </div>
             </ion-slide>
             <ion-slide> 

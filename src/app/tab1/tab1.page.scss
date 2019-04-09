@@ -1,18 +1,23 @@
 .welcome-card {
   height: 30vh;
-  background-image: url("/assets/imgs/shoes.jpg") ;
-  background-size: 100% 100%;
+  background-image: url("/assets/imgs/shoesbaby.jpg") ;
+  background-size:cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   box-shadow: 1px 1px 1px #212121;
   position: relative;
 }
 
 .welcome-card-content {
-  background-color: red;
+  background-color:  rgba(0, 0, 0, .4) !important;
   position: absolute;
-  top: 50%;
-  color: white;
+  bottom: 0;
+  color: #fff;
+  font-size: 15px;
+  padding: 8px;
+  text-align: center;
+
 }
 
 ion-slides ion-img {

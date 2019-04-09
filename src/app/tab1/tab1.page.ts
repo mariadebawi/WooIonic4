@@ -106,4 +106,7 @@ export class Tab1Page {
     await loading.present();
     this.router.navigateByUrl('/categorie');
   }
+  gotoproducts(productId: any) {
+      console.log(productId) ;
+  }
 }

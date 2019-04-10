@@ -27,7 +27,7 @@ export class Tab1Page {
   page: number;
   slideOpts = {
     slidesPerView: 3,
-    spaceBetween: 5,
+    spaceBetween: 5 ,
   };
   slideOpts1 = {
     slidesPerView: 3,

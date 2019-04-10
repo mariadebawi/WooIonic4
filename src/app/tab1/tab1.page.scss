@@ -4,7 +4,6 @@
   background-size:cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   box-shadow: 1px 1px 1px #212121;
   position: relative;
 }
@@ -20,6 +19,20 @@
 
 }
 
+ion-row.categ-text {
+  padding: 5px 0 3px 5px;
+  font-size: 17px;
+  font-weight: 500;
+}
+ion-row.categ-text ion-col.categ-text-voir{
+   color : #FF00CE ;
+   font-size: 14px;
+}
+ion-row.categ-text ion-col.categ-text-voir ion-icon {
+    display: inline-block;
+    height: 15px !important;
+    width: 15px !important;
+}
 ion-slides ion-img {
   height: -2vh !important;
 }
@@ -35,8 +48,10 @@ ion-slides ion-img {
   border-radius: 4px;
 }
 .categories  .categorie-name{
-   text-align: center ;
-   margin-top: 30px ;
+   
+   position: absolute;
+    bottom: 0;
+    left: 7px;
 }
 ion-slides .recent {
   height: 50vh;
@@ -50,5 +65,19 @@ ion-slide {
 
 ion-slide .recent-content .recent-img {
   height: 100px;
-  width: auto;
+  width: 150px;
+}
+
+h6.product-name {
+  color: red;
+  /* width: 100%; */
+  font-size: 17px;
+  /* left: 0; */
+  position: absolute;
+  left: 24px;
+}
+h6.product-price{
+  position: absolute;
+  bottom: -71px;
+  left: 27px;
 }

@@ -88,7 +88,7 @@
 
    <!--slides recents -->
 
-         <ion-slides  [options]="slideOpts" class="recent" #mySlider (ionSlidesDidLoad)="slidesDidLoad(mySlider)">
+         <ion-slides [options]="slideOpts" class="recent" #mySlider (ionSlidesDidLoad)="slidesDidLoad(mySlider)">
             <ion-slide> 
                 <div class="recent-content">
                   <ion-img src="{{src0}}" class="recent-img"> </ion-img>
@@ -99,8 +99,8 @@
             <ion-slide> 
                 <div class="recent-content">
                     <ion-img src="{{src1}}" class="recent-img"> </ion-img>
-                <h6>{{product1}}...</h6>
-                <h6>{{price1}} <span>Dt</span></h6>
+                <h6 class="product-name ">{{product1}}...</h6>
+                <h6 class="product-price " >{{price1}} <span>Dt</span></h6>
               </div>
             </ion-slide> 
             <ion-slide> 

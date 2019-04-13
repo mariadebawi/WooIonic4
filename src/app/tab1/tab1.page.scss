@@ -10,6 +10,7 @@
 
 .welcome-card-content {
   background-color:  rgba(0, 0, 0, .4) !important;
+  width:100% ;
   position: absolute;
   bottom: 0;
   color: #fff;
@@ -55,6 +56,7 @@ ion-slides ion-img {
 }
 ion-slides .recent {
   height: 50vh;
+  margin: 0 15px  !important;
 }
 
 ion-slide {
@@ -64,20 +66,22 @@ ion-slide {
 }
 
 ion-slide .recent-content .recent-img {
-  height: 100px;
-  width: 150px;
+  height: 114px;
+  width: 158px;
 }
 
 h6.product-name {
-  color: red;
-  /* width: 100%; */
   font-size: 17px;
-  /* left: 0; */
   position: absolute;
-  left: 24px;
+  left: 17px;
+  font-weight: 600;
+  text-transform: capitalize;
 }
-h6.product-price{
+h6.product-price {
   position: absolute;
   bottom: -71px;
-  left: 27px;
+  left: 18px;
+  font-weight: 600;
+  color: #ff00fe;
 }
+

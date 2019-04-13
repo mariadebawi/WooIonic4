@@ -26,13 +26,9 @@ export class Tab1Page {
   productsMore: any[];
   page: number;
   slideOpts = {
-    slidesPerView: 3,
-    spaceBetween: 5 ,
+    slidesPerView: 2,
   };
-  slideOpts1 = {
-    slidesPerView: 3,
-    spaceBetween: 5,
-  };
+
   constructor(private router: Router , public loadingController: LoadingController) {
     this.page = 2;
     this.Woocommerce = WC({
@@ -48,47 +44,47 @@ export class Tab1Page {
        console.log(JSON.parse(data.body));
       this.products = JSON.parse(data.body);
 
-      this.product0 = this.products[0].name.substr(0, 10);
+      this.product0 = this.products[0].name;
       this.price0 = this.products[0].price;
       this.src0 = this.products[0].images[0].src;
       console.log(this.product0);
       console.log(this.products[0].images[0].src);
        //
-      this.product1 = this.products[1].name.substr(0, 10);
+      this.product1 = this.products[1].name;
       this.price1 = this.products[1].price;
       this.src1 = this.products[1].images[0].src;
       console.log(this.products[1].images[0].src);
       //
-       this.product2 = this.products[2].name.substr(0, 10);
+       this.product2 = this.products[2].name;
       this.price2 = this.products[2].price;
       this.src2 = this.products[2].images[0].src;
 
       //
-       this.product3 = this.products[3].name.substr(0, 10);
+       this.product3 = this.products[3].name;
       this.price3 = this.products[3].price;
       this.src3 = this.products[3].images[0].src;
       //
-      this.product4 = this.products[4].name.substr(0, 10);
+      this.product4 = this.products[4].name;
       this.price4 = this.products[4].price;
       this.src4 = this.products[4].images[0].src;
       //
-      this.product5 = this.products[5].name.substr(0, 10);
+      this.product5 = this.products[5].name;
       this.price5 = this.products[5].price;
       this.src5 = this.products[5].images[0].src;
        //
-       this.product6 = this.products[6].name.substr(0, 10);
+       this.product6 = this.products[6].name;
        this.price6 = this.products[6].price;
        this.src6 = this.products[6].images[0].src;
        //
-       this.product7 = this.products[7].name.substr(0, 10);
+       this.product7 = this.products[7].name;
        this.price7 = this.products[7].price;
        this.src7 = this.products[7].images[0].src;
        //
-      this.product8 = this.products[8].name.substr(0, 10);
+      this.product8 = this.products[8].name;
       this.price8 = this.products[8].price;
       this.src8 = this.products[8].images[0].src;
        //
-      this.product9 = this.products[9].name.substr(0, 10);
+      this.product9 = this.products[9].name;
       this.price9 = this.products[9].price;
       this.src9 = this.products[9].images[0].src;
     }, (err) => {
@@ -98,6 +94,8 @@ export class Tab1Page {
   slidesDidLoad(slides: IonSlides) {
     slides.startAutoplay();
   }
+
+
    async gotocategorie() {
     const loading = await  this.loadingController.create({
       message: 'Hellooo',
@@ -105,8 +103,5 @@ export class Tab1Page {
     });
     await loading.present();
     this.router.navigateByUrl('/categorie');
-  }
-  gotoproducts(productId: any) {
-      console.log(productId) ;
   }
 }

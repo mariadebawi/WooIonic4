@@ -1,19 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import * as WC from 'woocommerce-api';
 import { RouterModule, Routes, Router } from '@angular/router';
-import {NavController} from '@ionic/angular';
-
 @Component({
-  selector: 'app-categorie',
-  templateUrl: './categorie.page.html',
-  styleUrls: ['./categorie.page.scss'],
+  selector: 'app-product-catego',
+  templateUrl: './product-catego.page.html',
+  styleUrls: ['./product-catego.page.scss'],
 })
-export class CategoriePage implements OnInit {
+export class ProductCategoPage implements OnInit {
+
   categories: any;
   Woocommerce: any;
   products: any;
 
-  constructor(private router: Router, public navCtrl: NavController) {
+  constructor(private router: Router) {
     this.Woocommerce = WC({
       url: 'https://artizone.tn/',
       consumerKey: 'ck_b0ce7005aa26ef1ccc1e74d69e52e2b602b291f0',
@@ -30,8 +29,5 @@ export class CategoriePage implements OnInit {
 
   ngOnInit() {
   }
-  gotoproduct(catg) {
-    //this.navCtrl.navigateForward('/ProductCategoPage',{catg})
-    );
-  }
+
 }

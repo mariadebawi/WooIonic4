@@ -74,14 +74,27 @@ h6.product-name {
   font-size: 17px;
   position: absolute;
   left: 17px;
-  font-weight: 600;
   text-transform: capitalize;
 }
 h6.product-price {
   position: absolute;
   bottom: -71px;
   left: 18px;
-  font-weight: 600;
   color: #ff00fe;
 }
-
+h6.partic-name {
+  font-size: 17px;
+}
+h6.partic-price {
+  margin-top: -4px;
+  margin-left: -56px;
+  color: #ff00fe;
+}
+ion-icon.favoris {
+  position: absolute;
+  top: 4px;
+  right: 14px;
+  width: 36px;
+  height: 30px;
+  color:#fff ;
+}

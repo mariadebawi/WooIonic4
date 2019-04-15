@@ -6,4 +6,52 @@
 
 <ion-content>
 
+  <!--
+    <ion-slides [options]="slideOpts" class="recent"  *ngFor="let p of product1"  >
+      
+      <ion-slide> 
+           
+          <div> {{p.name}}</div>
+          <div> {{p.name}}</div>
+
+        </ion-slide>
+      
+      </ion-slides>
+    -->
+
+    <ion-grid>
+        <ion-row  *ngFor="let p of product1">
+          <ion-col size="6" class="" >
+              <ion-card>
+                <!--
+                  <ion-item>
+                    <ion-icon name="pin" slot="start"></ion-icon>
+                    <ion-label>ion-item in a card, icon left, button right</ion-label>
+                    <ion-button fill="outline" slot="end">View</ion-button>
+                  </ion-item>
+                -->
+                  <ion-card-content>
+                      {{p.name}}
+                  </ion-card-content>
+                </ion-card>
+          </ion-col>
+          <ion-col size="6" class="" >
+              <ion-card>
+                <!--
+                  <ion-item>
+                    <ion-icon name="pin" slot="start"></ion-icon>
+                    <ion-label>ion-item in a card, icon left, button right</ion-label>
+                    <ion-button fill="outline" slot="end">View</ion-button>
+                  </ion-item>
+                -->
+                  <ion-card-content>
+                      {{p.name}}
+                  </ion-card-content>
+                </ion-card>
+          </ion-col>
+          </ion-row>
+          </ion-grid>
+
+
+   
 </ion-content>

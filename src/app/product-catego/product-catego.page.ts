@@ -1,17 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 import * as WC from 'woocommerce-api';
 import { RouterModule, Routes, Router } from '@angular/router';
+import { ProductCategorieService } from '../product-categorie.service';
+
 @Component({
   selector: 'app-product-catego',
   templateUrl: './product-catego.page.html',
   styleUrls: ['./product-catego.page.scss'],
 })
 export class ProductCategoPage implements OnInit {
-
+  i: number ;
   categories: any;
   Woocommerce: any;
-  products: any;
-
+  product: any;
+  product1: any[];
+  slideOpts = {
+    slidesPerView: 2,
+  };
+  myproduct: any;
   constructor(private router: Router) {
     this.Woocommerce = WC({
       url: 'https://artizone.tn/',
@@ -21,9 +27,15 @@ export class ProductCategoPage implements OnInit {
       version: 'wc/v2',
       queryStringAuth: true
     });
-     this.Woocommerce.getAsync('products/categories').then((data) => {
-       console.log(JSON.parse(data.body));
-       this.categories = JSON.parse(data.body);
+
+    this.product =  ProductCategorieService.categProduct;
+    console.log(this.product.catg.slug);
+    this.product1 = [this.product.catg] ;
+
+     this.Woocommerce.getAsync('products').then((data) => {
+       // console.log(JSON.parse(data.body));
+       this.myproduct = JSON.parse(data.body);
+       console.log(this.myproduct[0].categories[0].slug);
     });
    }
 

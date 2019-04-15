@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import * as WC from 'woocommerce-api';
 import { RouterModule, Routes, Router } from '@angular/router';
 import {NavController} from '@ionic/angular';
+import { ProductCategorieService } from '../product-categorie.service';
 
 @Component({
   selector: 'app-categorie',
@@ -13,6 +14,7 @@ export class CategoriePage implements OnInit {
   Woocommerce: any;
   products: any;
 
+
   constructor(private router: Router, public navCtrl: NavController) {
     this.Woocommerce = WC({
       url: 'https://artizone.tn/',
@@ -23,15 +25,16 @@ export class CategoriePage implements OnInit {
       queryStringAuth: true
     });
      this.Woocommerce.getAsync('products/categories').then((data) => {
-       console.log(JSON.parse(data.body));
+       // console.log(JSON.parse(data.body));
        this.categories = JSON.parse(data.body);
+
     });
    }
 
   ngOnInit() {
   }
-  gotoproduct(catg) {
-    //this.navCtrl.navigateForward('/ProductCategoPage',{catg})
-    );
+  async gotoproduct(catg) {
+    ProductCategorieService.categProduct = {catg};
+    await this.navCtrl.navigateForward('/product-catego');
   }
 }
